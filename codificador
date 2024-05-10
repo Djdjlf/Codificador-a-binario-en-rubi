@@ -1,0 +1,15 @@
+def texto_a_binario(texto)
+  resultado = ""
+
+  texto.each_char do |caracter|
+    resultado += caracter.ord.to_s(2).rjust(8, '0')
+  end
+
+  return resultado
+end
+
+# Ejemplo de uso
+puts "Ingrese el texto a codificar:"
+texto = gets.chomp
+puts "Texto original: #{texto}"
+puts "Binario: #{texto_a_binario(texto)}"
